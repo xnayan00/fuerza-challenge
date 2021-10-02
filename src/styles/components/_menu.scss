@@ -1,0 +1,26 @@
+/**
+ *
+ * Menu
+ *
+ */
+.menu {
+  &,
+  ul {
+    @include list-unstyled;
+  }
+
+  a {
+    color: inherit;
+    display: inline-block;
+
+    &:hover {
+      border-bottom: 2px solid #0ff;
+      text-decoration: none;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+}
