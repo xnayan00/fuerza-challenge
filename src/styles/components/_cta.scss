@@ -1,0 +1,31 @@
+.cta {
+  background: linear-gradient(90deg, color('primary'), color('secondary'));
+
+  &__title {
+    color: $white;
+    font-family: 'Gotham Black';
+    font-size: px-to-rem(35px);
+  }
+
+  &__paragraph {
+    color: $white;
+    font-family: 'Futura Md BT';
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cta {
+    background: linear-gradient(100deg, color('primary'), color('secondary'));
+  
+    &__title {
+      font-size: px-to-rem(24px);
+      text-align: center;
+    }
+  
+    &__paragraph {
+      line-height: 25px;
+      text-align: center;
+    }
+  }
+}

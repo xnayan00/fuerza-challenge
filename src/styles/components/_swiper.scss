@@ -16,12 +16,14 @@
   }
 
   &__title {
-    color: var(--light-gray);
+    color: $white;
+    font-family: 'Gotham Black', sans-serif;
     font-size: px-to-rem(48);
   }
 
   &__paragraph {
-    color: var(--light-gray);
+    color: $white;
+    font-family: 'Futura Md BT', sans-serif;
     font-size: px-to-rem(18);
   }
 
@@ -30,5 +32,25 @@
     height: 100%;
     object-fit: cover;
     width: 100%;
+  }
+}
+
+.swiper-button--bold {
+  color: $white;
+  font-weight: 900;
+}
+
+@media (max-width: 640px) {
+  .swiper {
+    height: 60vh;
+    width: 100%;
+  }
+
+  .swiper-slide__title {
+    font-size: px-to-rem(24);
+  }
+
+  .swiper-slide__paragraph {
+    font-size: px-to-rem(12);
   }
 }

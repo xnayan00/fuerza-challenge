@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="100" viewBox="0 0 60 100">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00ffb1"/>
+      <stop offset="1" stop-color="#0062ff"/>
+    </linearGradient>
+  </defs>
+  <g id="Grupo_191" data-name="Grupo 191" transform="translate(-929 -925)">
+    <path id="Icon_awesome-bolt" data-name="Icon awesome-bolt" d="M55.5,31.25H33.863L41.851,5.9A4.668,4.668,0,0,0,37.5,0h-27A4.572,4.572,0,0,0,6.039,4.063l-6,46.875A4.634,4.634,0,0,0,4.5,56.25H26.757L18.114,94.238A4.639,4.639,0,0,0,22.482,100a4.47,4.47,0,0,0,3.9-2.344l33-59.375A4.682,4.682,0,0,0,55.5,31.25Z" transform="translate(929.001 925)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

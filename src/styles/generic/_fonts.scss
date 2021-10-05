@@ -3,3 +3,23 @@
     Use a tool like https://transfonter.org/ to
     convert your fonts.
 \* ------------------------------------------------------------ */
+
+@font-face {
+  font-display: swap;
+  font-family: 'Gotham Black';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('~@fonts/gotham/Gotham-Black.woff2') format('woff2'),
+    url('~@fonts/gotham/Gotham-Black.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Futura Md BT';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('~@fonts/futura/FuturaBT-Medium.woff2') format('woff2'),
+    url('~@fonts/futura/FuturaBT-Medium.woff') format('woff');
+}

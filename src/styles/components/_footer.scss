@@ -1,1 +1,9 @@
+.footer {
+  background: #222;
 
+  &__rights {
+    color: $white;
+    font-family: 'Futura Md BT';
+    font-size: px-to-rem(12px);
+  }
+}

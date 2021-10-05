@@ -15,8 +15,13 @@ $variable-prefix: '';
  *
  */
 $colors: (
-  'blue': #07a,
-  'light-gray': #626c72
+  'dark-gray': #272727,
+  'gray': #555,
+  'light-gray': #b1b1b1,
+  'primary': #00ffb1,
+  'primary-dark': #00e2bf,
+  'secondary': #0062ff,
+  'white': #fff,
 );
 $theme-colors: ();
 

@@ -7,12 +7,30 @@
 .btn {
   @include btn;
 
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+  }
+
   &-primary {
     @include button-size(px-to-rem(10px), px-to-rem(28px), $font-size-base, px-to-rem(100px));
-    background: linear-gradient(90deg, #0ff, #07a);
-    color: $white;
+    background: linear-gradient(90deg, color('primary'), color('secondary'));
+    color: color('white');
+    text-transform: uppercase;
+  }
+
+  &-outline {
+    @include button-size(px-to-rem(10px), px-to-rem(28px), $font-size-base, px-to-rem(100px));
+    border: 1px solid color('white');
+    color: color('white');
     text-transform: uppercase;
 
+    &:hover {
+      color: color('white');
+    }
+  }
+
+  &--icon {
     &::after {
       content: url('~@images/arrow-right.svg');
       margin-left: 10px;
@@ -33,7 +51,7 @@
   appearance: none;
   background-color: transparent;
   border: 0;
-  color: $white;
+  color: color('white');
   display: none;
   font-size: 0;
   line-height: 0;

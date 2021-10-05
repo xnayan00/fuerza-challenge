@@ -1,0 +1,61 @@
+.blog {
+  background: #f9f9f9;
+}
+
+.card-post {
+  &__figure {
+    height: 250px;
+    transition: all 0.2s;
+    width: 100%;
+
+    &:hover {
+      cursor: pointer;
+      filter: opacity(0.6);
+    }
+  }
+
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 0;
+  }
+
+  &__title {
+    font-family: 'Gotham Black', sans-serif;
+    font-size: px-to-rem(20px);
+  }
+
+  &__paragraph {
+    font-family: 'Futura Md BT', sans-serif;
+    font-size: px-to-rem(16px);
+    line-height: 25px;
+  }
+}
+
+.image1 {
+  background-image: url('~@images/blog-image1.png');
+}
+
+.image2 {
+  background-image: url('~@images/blog-image2.png');
+}
+
+.image3 {
+  background-image: url('~@images/blog-image3.png');
+}
+
+.meta__category {
+  background: color('primary');
+  border-radius: 25px;
+  color: color('white');
+  cursor: pointer;
+  font-family: 'Futura Md BT';
+  height: 25px;
+  text-align: center;
+  width: 100px;
+}
+
+.meta__date {
+  color: color('light-gray');
+  font-family: 'Futura Md BT';
+}

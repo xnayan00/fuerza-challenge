@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,17 +24,44 @@
     <div class="container">
       <div class="header__body">
         <div class="header__logo">
-          <a href="#" class="logo">
-            <img src="images/logo.svg" alt="logotipo" />
+          <a href="./index.html" class="logo">
+            <img src="./images/logo.svg" alt="logotipo" />
           </a>
         </div>
-        <div class="header__menu" data-element="menu">
+        <div class="header__menu d-none d-lg-block" data-element="menu">
           <ul class="menu menu-main">
             <li class="menu-item">
               <a href="#">A Empresa</a>
             </li>
-            <li class="menu-item">
-              <a href="#">Serviços</a>
+            <li class="dropdown menu-item">
+              <a
+                class="dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropServices"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                data-bs-auto-close="false"
+              >Serviços</a>
+              <ul class="dropdown-menu" aria-labelledby="dropServices">
+                <li><a class="dropdown-item" href="#">Consultoria</a></li>
+                <li class="dropend">
+                  <a
+                    id="subSystemsServices"
+                    class="dropdown-item dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    href="#"
+                  >Sistemas</a>
+
+                  <ul class="dropdown-menu" aria-labelledby="subSystemsServices">
+                    <li><a class="dropdown-item" href="#">Sites</a></li>
+                    <li><a class="dropdown-item" href="#">Aplicativos</a></li>
+                    <li><a class="dropdown-item" href="#">ERP</a></li>
+                  </ul>
+                </li>
+                <li><a class="dropdown-item" href="#">Marketing</a></li>
+              </ul>
             </li>
             <li class="menu-item">
               <a href="#">Equipe</a>
@@ -48,15 +75,55 @@
           </ul>
         </div>
 
+        <!-- Mobile Menu -->
         <button
-          class="btn-nav"
-          data-element="toggle-menu"
-          aria-controls="navbar"
-          aria-expanded="true"
-          aria-label="Toggle navigation"
+          class="btn btn-primary d-lg-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight"
+        >Menu</button>
+        <ul
+          class="mobile-menu offcanvas offcanvas-end w-75 h-100 d-lg-none"
+          tabindex="-1"
+          id="offcanvasRight"
+          aria-labelledby="offcanvasRightLabel"
         >
-          <span></span>
-        </button>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">A Empresa</a></li>
+          <li class="mobile-menu__item">
+            <a
+              class="mobile-menu__link"
+              data-bs-toggle="collapse"
+              href="#subServiceMobile"
+              role="button"
+              aria-expanded="false"
+              aria-controls="subServiceMobile"
+            >Serviços</a>
+            <ul class="collapse mobile-menu__submenu" id="subServiceMobile">
+              <li class="submenu__item"><a class="mobile-menu__link" href="#">Consultoria</a></li>
+              <li class="submenu__item">
+                <a
+                  class="mobile-menu__link"
+                  data-bs-toggle="collapse"
+                  href="#subSystemsServices"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="subSystemsServices"
+                >Sistemas</a>
+              </li>
+              <ul class="collapse mobile-menu__sub-system" id="subSystemsServices">
+                <li class="submenu__item"><a class="mobile-menu-system__link" href="">Sites</a></li>
+                <li class="submenu__item"><a class="mobile-menu-system__link" href="">Aplicativos</a></li>
+                <li class="submenu__item"><a class="mobile-menu-system__link" href="">ERP</a></li>
+              </ul>
+              <li class="submenu__item"><a class="mobile-menu__link" href="#">Marketing</a></li>
+            </ul>
+          </li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Equipe</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Galeria</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Fale Conosco</a></li>
+        </ul>
+        <!-- Mobile Menu end-->
       </div>
     </div>
   </header>
@@ -64,13 +131,13 @@
 
   <!-- start-hero -->
   <section class="hero">
-    <div class="swiper mySwiper">
+    <div id="swiper" class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="swiper-slide__content">
             <h1 class="swiper-slide__title">Mudar é preciso_</h1>
             <p class="swiper-slide__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <button class="btn btn-primary">Saiba mais</button>
+            <button class="btn btn-primary btn--icon">Saiba mais</button>
           </div>
         </div>
         <div class="swiper-slide">
@@ -80,30 +147,56 @@
           </div>
         </div>
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next swiper-button--bold"></div>
+      <div class="swiper-button-prev swiper-button--bold"></div>
     </div>
   </section>
   <!-- /end-hero -->
 
   <!-- start-short-content -->
   <section class="short-content">
-    <div class="container">
-      <!--
-        - Style de card short-content
-        - Add it to a grid list.
-       -->
-      <div class="card-short-content">
-        <figure class="card-short-content__figure">
-          <img src="/images/awesome-futbol.svg" alt="" />
-        </figure>
-        <div class="card-short-content__inner">
-          <h3 class="card-short-content__title">Lorem Ipsum is simple dummy!</h3>
-          <div class="the-content">
-            <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took</p>
+    <div class="container py-5">
+      <div class="row">
+          <div class="col-md-4 p-4 text-center">
+            <div class="card-short-content">
+              <figure class="card-short-content__figure">
+                <img src="/images/awesome-futbol.svg" alt="" />
+              </figure>
+              <div class="card-short-content__inner">
+                <h3 class="card-short-content__title">Lorem Ipsum is simple dummy!</h3>
+                <div class="the-content">
+                  <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 p-4 text-center">
+            <div class="card-short-content">
+              <figure class="card-short-content__figure">
+                <img src="/images/lightning.svg" alt="" />
+              </figure>
+              <div class="card-short-content__inner">
+                <h3 class="card-short-content__title">Nam tortor quaeget</h3>
+                <div class="the-content">
+                  <p>Lorem Ipsum has been the industry’s standard dummy text ever since</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 p-4 text-center">
+            <div class="card-short-content">
+              <figure class="card-short-content__figure">
+                <img src="/images/steam.svg" alt="" />
+              </figure>
+              <div class="card-short-content__inner">
+                <h3 class="card-short-content__title">Maecenas vehicula tincidunt</h3>
+                <div class="the-content">
+                  <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
     </div>
   </section>
   <!-- /end-short-content -->
@@ -111,13 +204,52 @@
   <!-- start-blog -->
   <section class="blog">
     <div class="container">
-      <div class="card-post">
-        <!--
-          - Create your own card-post markup;
-          - Style it.
-          - Add it to a grid list.
-          - Don't forget that all the page should be responsible.
-         -->
+      <div class="row">
+        <div class="col-md-4 p-5">
+          <div class="card-post">
+            <div class="card-post__figure image1"></div>
+            <div class="card-post__meta">
+              <div class="meta__category">Categoria</div>
+              <div class="meta__date">02/12/2021</div>
+            </div>
+            <div class="card-post__content">
+              <h3 class="card-post__title">Lorem Ipsum is simply dummy!</h3>
+              <div class="card-post__paragraph">
+                <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-5">
+          <div class="card-post">
+            <div class="card-post__figure image2"></div>
+            <div class="card-post__meta">
+              <div class="meta__category">Categoria</div>
+              <div class="meta__date">02/12/2021</div>
+            </div>
+            <div class="card-post__content">
+              <h3 class="card-post__title">Lorem Ipsum is simply dummy!</h3>
+              <div class="card-post__paragraph">
+                <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-5">
+          <div class="card-post">
+            <div class="card-post__figure image3"></div>
+            <div class="card-post__meta">
+              <div class="meta__category">Categoria</div>
+              <div class="meta__date">02/12/2021</div>
+            </div>
+            <div class="card-post__content">
+              <h3 class="card-post__title">Lorem Ipsum is simply dummy!</h3>
+              <div class="card-post__paragraph">
+                <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -125,17 +257,34 @@
   
   <!-- start-cta -->
   <div class="cta">
-    <!--
-      - Put your CTA (call-to-action) markup here.
-    -->
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-md-9 align-self-center">
+          <h3 class="cta__title">Lorem Ipsum is simply dummy!</h3>
+          <div class="cta__paragraph">
+            <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five</p>
+          </div>
+        </div>
+        <div class="col-md-3 text-center align-self-center">
+          <button class="btn btn-outline btn--icon">Saiba mais</button>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- /end-cta -->
   
   <!-- start-footer -->
   <footer class="footer">
-    <!--
-      - Put your Footer markup here.
-    -->
+    <div class="container">
+      <div class="row p-1 justify-content-between align-items-center">
+        <div class="col-8 footer__rights">
+          <caption>Todos os direitos reservados</caption>
+        </div>
+        <fgure class="col-4 text-end footer__logo">
+          <img src="./images/footer-logo.svg" alt="logotipo">
+        </fgure>
+      </div>
+    </div>
   </footer>
   <!-- /end-footer -->
 </body>

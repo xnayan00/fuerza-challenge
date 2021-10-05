@@ -26,10 +26,6 @@
     max-width: px-to-rem(300px);
     width: 100%;
 
-    a {
-      display: inline-block;
-    }
-
     img {
       @extend %img-responsive;
     }
